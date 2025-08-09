@@ -56,5 +56,5 @@ If you need BibTeX for the paper text:
   author  = {Tupay, Johann Anton Michael},
   title   = {Deriving the Universal QCD Entropy Constant from First Principles},
   year    = {2025},
-  note    = {Preprint and repository: https://github.com/JAMTUPAY/Paper-5-Deriving-the-Universal-QCD-Entropy-Constant-from-First-Principles}
+  note    = {Preprint and repository: https://github.com/JAMTUPAY/Paper-5-Deriving-the-Universal-QCD-Entropy-Constant-from-First-Principles }
 }

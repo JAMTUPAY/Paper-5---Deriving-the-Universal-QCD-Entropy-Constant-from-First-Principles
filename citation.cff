@@ -1,10 +1,4 @@
 
-*(The README references your four prior papers so readers can follow the series. For context: Paper 1 (empirical constant) → Paper 2 (exotics) → Paper 3 (QGP threshold) → Paper 4 (neutron stars). :contentReference[oaicite:0]{index=0} :contentReference[oaicite:1]{index=1} :contentReference[oaicite:2]{index=2} :contentReference[oaicite:3]{index=3})*
-
----
-
-### 2) citation.cff  (paste this exactly as the entire file)
-
 ```yaml
 cff-version: 1.2.0
 message: "If you use this repository or paper, please cite it."

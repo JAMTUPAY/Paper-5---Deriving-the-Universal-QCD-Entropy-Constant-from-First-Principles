@@ -1,42 +1,60 @@
+# Paper 5 — Deriving the Universal QCD Entropy Constant from First Principles
 
-*(The README references your four prior papers so readers can follow the series. For context: Paper 1 (empirical constant) → Paper 2 (exotics) → Paper 3 (QGP threshold) → Paper 4 (neutron stars). :contentReference[oaicite:0]{index=0} :contentReference[oaicite:1]{index=1} :contentReference[oaicite:2]{index=2} :contentReference[oaicite:3]{index=3})*
+**Short description.**  
+This repository contains the LaTeX source and compiled PDF for Paper 5, which derives the QCD RG–entropy constant
+\[
+|\Delta S_{\rm RG}| \;=\; 2\pi\,[a_{\rm UV}-a_{\rm IR}]\,k_B
+\]
+from continuum field theory using the Casini–Huerta–Myers (CHM) map and the 4D A‑type trace anomaly. For QCD with \(SU(3)\), a gapped IR (\(a_{\rm IR}=0\)), and two effectively massless Dirac flavors at the UV end of the spherical trajectory (\(N_f^{\rm eff}=2\)), the free‑field anomaly gives \(a_{\rm UV}=281/180\) and therefore
+\[
+|\Delta S_{\rm RG}| \;=\; \frac{281\pi}{90}\,k_B \;=\; 9.809\,k_B \approx 9.81\,k_B.
+\]
+No lattice inputs are used; the value follows from anomaly coefficients and geometry (κ=2π). This matches the constant used in Papers 1–4.
 
 ---
 
-### 2) citation.cff  (paste this exactly as the entire file)
+## Repository structure
+  ```
+paper5-entropy-constant/
+├── paper/
+│ ├── main.tex
+│ └── paper5_derivation.pdf
+├── README.md
+├── LICENSE
+└── citation.cff
+  ```
 
-```yaml
-cff-version: 1.2.0
-message: "If you use this repository or paper, please cite it."
-title: "Deriving the Universal QCD Entropy Constant from First Principles (paper & source)"
-authors:
-  - family-names: Tupay
-    given-names: Johann Anton Michael
-    orcid: "https://orcid.org/0009-0008-7661-8698"
-repository-code: "https://github.com/JAMTUPAY/paper5-entropy-constant"
-license: MIT
-version: v1.0.0
-date-released: 2025-08-09
-keywords:
-  - QCD
-  - entanglement entropy
-  - trace anomaly
-  - CHM mapping
-  - RG flow
-abstract: >
-  Continuum-field-theory derivation of the QCD RG–entropy constant using the
-  Casini–Huerta–Myers mapping and the 4D A-type anomaly. For SU(3) with a gapped IR
-  and two effectively massless Dirac flavors at the UV end of the spherical trajectory,
-  a_UV = 281/180 yields |ΔS_RG| = 281π/90 k_B = 9.809 k_B (κ=2π), matching the constant
-  used in Papers 1–4.
+> If you are using Overleaf, keep `main.tex` and upload any figures there. If you build locally, see “Build” below.
 
-preferred-citation:
-  type: article
-  title: "Deriving the Universal QCD Entropy Constant from First Principles"
-  authors:
-    - family-names: Tupay
-      given-names: Johann Anton Michael
-      orcid: "https://orcid.org/0009-0008-7661-8698"
-  year: 2025
-  journal: "Preprint"
-  url: "https://github.com/JAMTUPAY/paper5-entropy-constant"
+---
+
+## Key result (one line)
+
+**Universal constant (QCD, \(N_c=3\), \(N_f^{\rm eff}=2\)):**  
+\(|\Delta S_{\rm RG}| = 281\pi/90 \, k_B = 9.809\,k_B\) (CHM map + A‑anomaly, κ=2π).
+
+**Assumptions:** gapped IR (\(a_{\rm IR}=0\)); \(u,d\) effectively massless on the spherical trajectory; renormalized \(\mathbb{H}^3\) volume set to 1.
+
+---
+
+## Build (local)
+
+- TeX Live / MacTeX:
+  ```bash
+  cd paper
+  pdflatex main
+  bibtex main || true
+  pdflatex main
+  pdflatex main
+
+Output: paper5_derivation.pdf (identical to the one committed here).
+How to cite
+See citation.cff (GitHub will render “Cite this repository”).
+If you need BibTeX for the paper text:
+
+@article{tupay2025_qcd_entropy_constant,
+  author  = {Tupay, Johann Anton Michael},
+  title   = {Deriving the Universal QCD Entropy Constant from First Principles},
+  year    = {2025},
+  note    = {Preprint and repository: https://github.com/JAMTUPAY/paper5-entropy-constant}
+}

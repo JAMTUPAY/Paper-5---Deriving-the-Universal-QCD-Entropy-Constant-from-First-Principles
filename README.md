@@ -1,5 +1,7 @@
 # Paper 5 — Deriving the Universal QCD Entropy Constant from First Principles
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16785245.svg)](https://doi.org/10.5281/zenodo.16785245)
+
 **Short description.**  
 This repository contains the LaTeX source and compiled PDF for Paper 5, which derives the QCD RG–entropy constant
 \[
@@ -48,13 +50,16 @@ paper5-entropy-constant/
   pdflatex main
 
 Output: paper5_derivation.pdf (identical to the one committed here).
-How to cite
-See citation.cff (GitHub will render “Cite this repository”).
-If you need BibTeX for the paper text:
 
+### Citation
+
+If you use this work, please cite:
+
+```bibtex
 @article{tupay2025_qcd_entropy_constant,
-  author  = {Tupay, Johann Anton Michael},
-  title   = {Deriving the Universal QCD Entropy Constant from First Principles},
-  year    = {2025},
-  note    = {Preprint and repository: https://github.com/JAMTUPAY/Paper-5-Deriving-the-Universal-QCD-Entropy-Constant-from-First-Principles }
+  author = {Tupay, Johann Anton Michael},
+  title  = {Deriving the Universal QCD Entropy Constant from First Principles},
+  year   = {2025},
+  doi    = {10.5281/zenodo.16785245},
+  url    = {https://doi.org/10.5281/zenodo.16785245}
 }
